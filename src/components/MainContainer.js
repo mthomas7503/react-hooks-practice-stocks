@@ -35,11 +35,11 @@ function handleChange(e) {
 
 function handleAlphabetSort() {
  const sortedData = stockData.sort((a,b) => {
-    const stockNameA = a.name.toUpperCase();
-    const stockNameB = b.name.toUpperCase();
+    const stockTickerA = a.ticker.toUpperCase();
+    const stockTickerB = b.ticker.toUpperCase();
 
-    if(stockNameA < stockNameB) {return -1; }
-    if(stockNameA > stockNameB) {return 1};
+    if(stockTickerA < stockTickerB) {return -1; }
+    if(stockTickerA > stockTickerB) {return 1};
     return 0
   });
 
