@@ -1,11 +1,18 @@
 import React from "react";
 import Stock from "./Stock";
 
-function StockContainer() {
+
+function StockContainer({ stocks, handleClickEvent}) {
+
+  
+  
+  const stockList = stocks.map((stock) => <Stock handleClick={handleClickEvent} data={stock} key={stock.id}/>)
+
+ 
   return (
     <div>
       <h2>Stocks</h2>
-      {/* render stock list here*/}
+      {stockList}
     </div>
   );
 }
